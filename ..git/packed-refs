@@ -1,0 +1,5 @@
+# pack-refs with: peeled fully-peeled sorted 
+b6522b2509a6558a8866974f288a9f38e39fd050 refs/heads/main
+0d402ab88a9dd694c93a4954708567d0e519aa8c refs/remotes/origin/HEAD
+0d402ab88a9dd694c93a4954708567d0e519aa8c refs/remotes/origin/main
+4323536fd9c707ef25c698e5a76beed97f3fe8b4 refs/remotes/origin/뭔가-수정하다-실패한거같음
