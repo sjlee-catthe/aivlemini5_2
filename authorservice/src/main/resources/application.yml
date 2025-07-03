@@ -73,4 +73,4 @@ spring:
           destination: aivlemini
           contentType: application/json
 server:
-  port: 8082
+  port: 8080

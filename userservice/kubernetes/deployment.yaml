@@ -13,10 +13,11 @@ spec:
     metadata:
       labels:
         app: userservice
+        sidecar.istio.io/inject: "true"
     spec:
       containers:
         - name: userservice
-          image: "username/userservice:latest"
+          image: "jaekyung959/userservice:v1"
           ports:
             - containerPort: 8080
           readinessProbe:

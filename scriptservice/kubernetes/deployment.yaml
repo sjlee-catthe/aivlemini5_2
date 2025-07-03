@@ -13,10 +13,11 @@ spec:
     metadata:
       labels:
         app: scriptservice
+        sidecar.istio.io/inject: "true"
     spec:
       containers:
         - name: scriptservice
-          image: "username/scriptservice:latest"
+          image: "jaekyung959/scriptservice:v1"
           ports:
             - containerPort: 8080
           readinessProbe:

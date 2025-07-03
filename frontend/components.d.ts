@@ -31,7 +31,6 @@ declare module '@vue/runtime-core' {
     GetAllPoint: typeof import('./src/components/GetAllPoint.vue')['default']
     Index: typeof import('./src/components/pages/Index.vue')['default']
     LargeObject: typeof import('./src/components/primitives/LargeObject.vue')['default']
-    Loginpage: typeof import('./src/components/loginpage.vue')['default']
     LoginPage: typeof import('./src/components/pages/LoginPage.vue')['default']
     Money: typeof import('./src/components/vo/Money.vue')['default']
     Number: typeof import('./src/components/primitives/Number.vue')['default']

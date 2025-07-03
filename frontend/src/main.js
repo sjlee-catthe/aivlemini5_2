@@ -21,6 +21,9 @@ const app = createApp(App)
 // const isCodespace = window.location.hostname.includes('github.dev');
 // axios.defaults.baseURL = isCodespace ? 'https://' + window.location.hostname.replace('8080','8088') : 'http://localhost:8088';
 // axios.defaults.baseURL = 'https://symmetrical-sniffle-vxppj9qx79pfjr5-8088.app.github.dev';
+
+// 배포용 axios의 baseURL설정
+// 원래는 .env.production의 VITE_API_BASE_URL을 사용하는거임 (이렇게 해도 무관)
 axios.defaults.baseURL = '';
 axios.defaults.withCredentials = true;
 app.config.globalProperties.$axios = axios;
