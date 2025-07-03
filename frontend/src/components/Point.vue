@@ -10,13 +10,6 @@
             v-model="value.userId"
             :editMode="editMode"
         />
-        <ApplyingId
-            offline
-            label="열람 ID"
-            v-model="value.applyingId"
-            :editMode="editMode"
-            @change="change"
-        />
         <v-row class="ma-0 pa-0">
             <v-spacer></v-spacer>
             <v-btn width="64px" color="primary" @click="save">

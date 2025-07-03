@@ -27,11 +27,7 @@
                         <tr>
                         <th>Id</th>
                         <th>Point</th>
-                        <th>ReadingId</th>
                         <th>UserId</th>
-                        <th>열람 ID</th>
-                        <th>열람</th>
-                        <th>회원정보</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -42,9 +38,7 @@
                         >
                             <td class="font-semibold">{{ idx + 1 }}</td>
                             <td class="whitespace-nowrap" label="Point">{{ val.point }}</td>
-                            <td class="whitespace-nowrap" label="회원정보">
-                                <UserInfoId :editMode="editMode" v-model="val.userInfoId"></UserInfoId>
-                            </td>
+                            <td class="whitespace-nowrap" label="UserId">{{ val.userId }}</td>
                             <v-row class="ma-0 pa-4 align-center">
                                 <v-spacer></v-spacer>
                                 <Icon style="cursor: pointer;" icon="mi:delete" @click="deleteRow(val)" />
@@ -107,9 +101,7 @@
                     <v-card-text>
                         <div>
                             <Number label="Point" v-model="selectedRow.point" :editMode="true"/>
-                            <Number label="ReadingId" v-model="selectedRow.readingId" :editMode="true"/>
                             <Number label="UserId" v-model="selectedRow.userId" :editMode="true"/>
-                            <ApplyingId offline label="열람 ID" v-model="selectedRow.applyingId" :editMode="true"/>
                             <v-divider class="border-opacity-100 my-divider"></v-divider>
                             <v-layout row justify-end>
                                 <v-btn

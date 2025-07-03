@@ -1,5 +1,7 @@
 package aivlemini.domain;
 
+import javax.persistence.Lob;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
@@ -15,12 +17,16 @@ public class BookView {
 
     private String category;
 
+    @Lob
     private String content;
 
+    @Lob
     private String summaryContent;
 
+    @Lob
     private String image;
 
+    @Lob
     private String pdfPath;
 
     private Long price;

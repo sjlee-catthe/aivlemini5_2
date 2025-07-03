@@ -35,9 +35,6 @@
                         <th>PdfPath</th>
                         <th>Price</th>
                         <th>NotifyStatus</th>
-                        <th>ManuscriptId</th>
-                        <th>ChatGPT</th>
-                        <th>원고</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -57,12 +54,6 @@
                             <td class="whitespace-nowrap" label="PdfPath">{{ val.pdfPath }}</td>
                             <td class="whitespace-nowrap" label="Price">{{ val.price }}</td>
                             <td class="whitespace-nowrap" label="NotifyStatus">{{ val.notifyStatus }}</td>
-                            <td class="whitespace-nowrap" label="ChatGPT">
-                                <GptId :editMode="editMode" v-model="val.gptId"></GptId>
-                            </td>
-                            <td class="whitespace-nowrap" label="원고">
-                                <ScriptId :editMode="editMode" v-model="val.scriptId"></ScriptId>
-                            </td>
                             <v-row class="ma-0 pa-4 align-center">
                                 <v-spacer></v-spacer>
                                 <Icon style="cursor: pointer;" icon="mi:delete" @click="deleteRow(val)" />
@@ -134,7 +125,6 @@
                             <String label="PdfPath" v-model="selectedRow.pdfPath" :editMode="true"/>
                             <Number label="Price" v-model="selectedRow.price" :editMode="true"/>
                             <Boolean label="NotifyStatus" v-model="selectedRow.notifyStatus" :editMode="true"/>
-                            <Number label="ManuscriptId" v-model="selectedRow.manuscriptId" :editMode="true"/>
                             <v-divider class="border-opacity-100 my-divider"></v-divider>
                             <v-layout row justify-end>
                                 <v-btn
