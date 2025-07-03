@@ -1,22 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: gateway
-  labels:
-    app: gateway
+  name: frontend
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
-      app: gateway
+      app: frontend
   template:
     metadata:
       labels:
-        app: gateway
+        app: frontend
         sidecar.istio.io/inject: "true"
     spec:
       containers:
-        - name: gateway
-          image: "jaekyung959/gateway:v1"
+        - name: frontend
+          image: "jaekyung959/frontend:v1"
           ports:
             - containerPort: 8080

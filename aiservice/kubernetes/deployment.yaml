@@ -13,12 +13,18 @@ spec:
     metadata:
       labels:
         app: aiservice
+        sidecar.istio.io/inject: "true"
     spec:
       containers:
         - name: aiservice
-          image: "username/aiservice:latest"
+          image: "jaekyung959/aiservice:v1"
           ports:
             - containerPort: 8080
+          env:
+            - name: OPENAI_API_KEY
+              value: 감자튀김
+            - name: TZ
+              value: Asia/Seoul            
           readinessProbe:
             httpGet:
               path: '/actuator/health'

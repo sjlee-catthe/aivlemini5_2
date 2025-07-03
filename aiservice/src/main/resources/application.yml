@@ -8,7 +8,8 @@ spring:
 # OpenAI API 설정
 openai:
   api:
-    key: ${OPENAI_API_KEY:감자튀김}
+    key: ${OPENAI_API_KEY}
+    # key: ${OPENAI_API_KEY:} # 개발 테스트용
     url: https://api.openai.com/v1/chat/completions
     image-url: https://api.openai.com/v1/images/generations
 

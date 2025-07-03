@@ -13,10 +13,11 @@ spec:
     metadata:
       labels:
         app: authorservice
+        sidecar.istio.io/inject: "true"
     spec:
       containers:
         - name: authorservice
-          image: "username/authorservice:latest"
+          image: "jaekyung959/authorservice:v2"
           ports:
             - containerPort: 8080
           readinessProbe:

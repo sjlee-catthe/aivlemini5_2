@@ -13,10 +13,11 @@ spec:
     metadata:
       labels:
         app: readservice
+        sidecar.istio.io/inject: "true"
     spec:
       containers:
         - name: readservice
-          image: "username/readservice:latest"
+          image: "jaekyung959/readservice:v1"
           ports:
             - containerPort: 8080
           readinessProbe:
