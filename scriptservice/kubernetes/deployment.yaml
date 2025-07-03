@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: scriptservice
-          image: user0514acr.azurecr.io/scripteserviece:latest
+          image: user0514acr.azurecr.io/scripteservice:latest
           ports:
             - containerPort: 8080
           readinessProbe:
