@@ -5,6 +5,8 @@
       <div class="logo">출간 책</div>
       <nav class="nav-buttons">
         <button @click="goReadings">열람내역</button>
+        <AuthorGrid ref="authorGridRef" style="display:none" />
+        <button @click="openAuthorDialog">작가등록</button>
         <button @click="goPoints">포인트</button>
         <button @click="logout" class="logout-btn">로그아웃</button>
       </nav>
@@ -60,6 +62,8 @@ import { ref, onMounted } from 'vue'
 import axios from 'axios'
 import { useRouter } from 'vue-router'
 import { useUserStore } from '@/stores/userStore'
+import AuthorGrid from '../ui/AuthorGrid.vue'
+const authorGridRef = ref(null)
 
 const books = ref([])
 const router = useRouter()
@@ -86,6 +90,9 @@ function goReadings() {
 }
 function goPoints() {
   router.push('/points')
+}
+function openAuthorDialog() {
+  if (authorGridRef.value) authorGridRef.value.showDialog()
 }
 </script>
 

@@ -6,11 +6,6 @@
             :editMode="editMode"
         />
         <Number
-            label="ReadingId"
-            v-model="value.readingId"
-            :editMode="editMode"
-        />
-        <Number
             label="UserId"
             v-model="value.userId"
             :editMode="editMode"

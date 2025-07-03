@@ -140,14 +140,14 @@ import BaseGrid from '../base-ui/BaseGrid.vue'
 export default {
     name: 'authorGrid',
     mixins:[BaseGrid],
-    components:{
-    },
     data: () => ({
         path: 'authors',
+        openDialog: false, // 추가
     }),
-    watch: {
-    },
     methods:{
+        showDialog() {      // 추가
+            this.openDialog = true
+        }
     }
 }
 

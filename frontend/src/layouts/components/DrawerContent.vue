@@ -42,12 +42,6 @@ import {
                 to: '/books',
             }"
         />
-        <VerticalNavLink
-            :item="{
-                title: '도서 조회',
-                to: '/getAllLibraries',
-            }"
-        />
         <VerticalNavSectionTitle :item="{ heading: '포인트관리' }" />
         <VerticalNavLink
             :item="{
@@ -55,23 +49,11 @@ import {
                 to: '/points',
             }"
         />
-        <VerticalNavLink
-            :item="{
-                title: '포인트 조회',
-                to: '/getAllPoints',
-            }"
-        />
         <VerticalNavSectionTitle :item="{ heading: '열람관리' }" />
         <VerticalNavLink
             :item="{
                 title: '열람',
                 to: '/readings',
-            }"
-        />
-        <VerticalNavLink
-            :item="{
-                title: '열람내역 조회',
-                to: '/readAllBooks',
             }"
         />
     </ul>

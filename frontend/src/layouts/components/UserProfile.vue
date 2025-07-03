@@ -9,6 +9,8 @@ const avatarBadgeProps = {
 }
 
 const userName = "USER"
+const point = 1234           // 포인트
+const subscribeStart = "2024-06-10"   // 구독 시작일 (YYYY-MM-DD)
 </script>
 
 <template>
@@ -20,7 +22,6 @@ const userName = "USER"
     >
       <VIcon icon="mdi-account" />
 
-      <!-- SECTION Menu -->
       <VMenu
         activator="parent"
         width="230"
@@ -28,44 +29,38 @@ const userName = "USER"
         offset="14px"
       >
         <VList>
-          <!-- 👉 User Avatar & Name -->
+          <!-- 👉 User Name -->
           <VListItem>
-            <template #prepend>
-              <VListItemAction start>
-                <VBadge v-bind="avatarBadgeProps">
-                  <VAvatar
-                    color="primary"
-                    size="40"
-                    variant="tonal"
-                  >
-                    <VIcon icon="mdi-account" />
-                  </VAvatar>
-                </VBadge>
-              </VListItemAction>
-            </template>
-
             <VListItemTitle class="font-weight-semibold">
-              
+              {{ userName }}
+            </VListItemTitle>
+          </VListItem>
+
+          <!-- 👉 Point 정보 -->
+          <VListItem>
+            <VListItemTitle>
+              포인트: <b>{{ point }}</b>
+            </VListItemTitle>
+          </VListItem>
+
+          <!-- 👉 구독 시작일 정보 -->
+          <VListItem>
+            <VListItemTitle>
+              구독 시작일: <b>{{ subscribeStart }}</b>
             </VListItemTitle>
           </VListItem>
 
           <VDivider class="my-2" />
-          
+
           <!-- 👉 Logout -->
           <VListItem to="/login">
             <template #prepend>
-              <VIcon
-                class="me-2"
-                icon="mdi-logout-variant"
-                size="22"
-              />
+              <VIcon class="me-2" icon="mdi-logout-variant" size="22" />
             </template>
-
             <VListItemTitle>Logout</VListItemTitle>
           </VListItem>
         </VList>
       </VMenu>
-      <!-- !SECTION -->
     </VAvatar>
   </VBadge>
 </template>

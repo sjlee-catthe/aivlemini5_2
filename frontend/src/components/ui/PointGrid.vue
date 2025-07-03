@@ -42,9 +42,6 @@
                         >
                             <td class="font-semibold">{{ idx + 1 }}</td>
                             <td class="whitespace-nowrap" label="Point">{{ val.point }}</td>
-                            <td class="whitespace-nowrap" label="열람">
-                                <ReadingId :editMode="editMode" v-model="val.readingId"></ReadingId>
-                            </td>
                             <td class="whitespace-nowrap" label="회원정보">
                                 <UserInfoId :editMode="editMode" v-model="val.userInfoId"></UserInfoId>
                             </td>
