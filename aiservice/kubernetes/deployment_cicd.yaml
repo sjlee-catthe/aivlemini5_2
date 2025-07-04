@@ -1,25 +1,30 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: scriptservice
+  name: aiservice
   labels:
-    app: scriptservice
+    app: aiservice
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: scriptservice
+      app: aiservice
   template:
     metadata:
       labels:
-        app: scriptservice
+        app: aiservice
         sidecar.istio.io/inject: "true"
     spec:
       containers:
-        - name: scriptservice
-          image: user0514acr.azurecr.io/scriptservice:latest
+        - name: aiservice
+          image: "user0514acr.azurecr.io/aiservice:latest"
           ports:
             - containerPort: 8080
+          env:
+            - name: OPENAI_API_KEY
+              value: "${OPENAI_API_KEY}"
+            - name: TZ
+              value: Asia/Seoul            
           readinessProbe:
             httpGet:
               path: '/actuator/health'
