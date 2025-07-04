@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: libraryservice
-          image: "jaekyung959/libraryservice:v1"
+          image: "user0514acr.azurecr.io/libraryservice:latest"
           ports:
             - containerPort: 8080
           readinessProbe:
