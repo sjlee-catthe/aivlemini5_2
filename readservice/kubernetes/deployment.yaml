@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: readservice
-          image: "jaekyung959/readservice:v1"
+          image: "user0514acr.azurecr.io/readservice:latest"
           ports:
             - containerPort: 8080
           readinessProbe:
