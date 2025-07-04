@@ -1,4 +1,6 @@
-# 
+# KT AIVLE SCHOOL 5차 미니프로젝트_14조
+# aivle 걷다가서재
+### AI 기반 자동 출간 및 구독 플랫폼 도메인 주도 설계(DDD) 와 마이크로서비스 아키텍처(MSA) 기반으로 구현된 클라우드 네이티브 애플리케이션 프로젝트
 
 ## Model
 www.msaez.io/#/105428209/storming/a4fed3a08dabf2ac2bf71d44a1962d32123
